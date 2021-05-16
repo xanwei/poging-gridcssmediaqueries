@@ -1,0 +1,130 @@
+@media (min-width: 320px) {
+    .grid-container {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 3fr 5fr 1fr;
+        grid-template-areas: "header""main""area""footer";
+        grid-row-gap: 5px;
+        max-height: 700px;
+    }
+}
+
+.header {
+    grid-area: 1/1/2/2;
+    width: 320px;
+    background-color: rgb(255, 166, 121);
+    max-height: 50px;
+}
+
+.main {
+    grid-area: 10/1/11/2;
+    width: 320px;
+    background-color: rgb(15, 6, 20);
+    grid-row-gap: 3px;
+}
+
+.area {
+    grid-area: 2/1/7/2;
+    width: 320px;
+    background-color: rgb(15, 100, 228);
+}
+
+.footer {
+    grid-area: 7/1/10/2;
+    width: 320px;
+    background-color: rgb(67, 144, 22);
+    max-height: 50px;
+}
+
+@media (min-width: 1024px) {
+    .grid-container {
+        display: grid;
+        min-height: 750px;
+        width: 100%;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat (7, 1 fr);
+        grid-template-areas: "header main" "header area" "header footer";
+        grid-gap: 3px;
+    }
+}
+
+body {
+    width: 1024px;
+    background-color: rgb(197, 186, 211);
+    min-height: 750px;
+}
+
+.header {
+    grid-area: 1/1/8/2;
+    width: 340px;
+    background-color: rgb(255, 166, 121);
+    min-height: 750px;
+}
+
+.main {
+    grid-area: 1/2/5/4;
+    width: 683px;
+    background-color: rgb(85, 16, 122);
+    min-height: 400px;
+}
+
+.area {
+    grid-area: 5/2/7/4;
+    width: 683px;
+    background-color: rgb(15, 100, 228);
+    min-height: 300px;
+}
+
+.footer {
+    grid-area: 7/2/8/4;
+    width: 683px;
+    background-color: rgb(67, 144, 22);
+    min-height: 50px;
+}
+
+@media (min-width: 1400px) {
+    .grid-container {
+        display: grid;
+        min-height: 1080px;
+        width: 100%;
+        grid-template-columns: repeat (5, 1fr);
+        grid-template-rows: repeat (10, 1 fr);
+        grid-template-areas: "header main main main area" "header footer footer footer area";
+        grid-gap: 3px;
+    }
+}
+
+body {
+    font-size: 14px;
+    color: #ffffff;
+    width: 1400px;
+    background-color: rgb(197, 186, 211);
+    min-height: 1080px;
+}
+
+.header {
+    grid-area: 1/1/11/2;
+    width: 400px;
+    background-color: rgb(255, 166, 121);
+    min-height: 1080px;
+}
+
+.main {
+    grid-area: 1/2/10/5;
+    width: auto;
+    background-color: rgb(85, 16, 122);
+    min-height: 1000px;
+}
+
+.area {
+    grid-area: 1/5/11/6;
+    width: 400px;
+    background-color: rgb(15, 100, 228);
+    min-height: 1080px;
+}
+
+.footer {
+    grid-area: 10/2/11/5;
+    width: auto;
+    background-color: rgb(67, 144, 22);
+    min-height: 100px;
+}
